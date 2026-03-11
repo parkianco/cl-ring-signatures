@@ -5,7 +5,7 @@
 
 (asdf:defsystem #:cl-ring-signatures
   :description "Pure Common Lisp ring signatures and MuSig2 aggregate Schnorr signatures"
-  :author "CLPIC Contributors"
+  :author "Parkian Company LLC"
   :license "BSD-3-Clause"
   :version "1.0.0"
   :serial t
