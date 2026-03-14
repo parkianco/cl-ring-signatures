@@ -1,14 +1,11 @@
-# cl-ring-signatures
+# Ring Signatures
 
-Pure Common Lisp ring signatures and MuSig2 aggregate Schnorr signatures with **zero external dependencies**.
+Utility library providing specialized functionality for Common Lisp applications.
 
 ## Features
 
-- **Ring signatures**: Anonymous signatures within a group
-- **Linkable rings**: Detect double-signing
-- **MLSAG**: Multilayer Linkable Spontaneous Anonymous Group
-- **MuSig2**: Aggregate Schnorr signatures
-- **Pure Common Lisp**: No CFFI, no external libraries
+- Core functionality implementation
+- Pure Common Lisp (zero external dependencies)
 
 ## Installation
 
@@ -16,38 +13,12 @@ Pure Common Lisp ring signatures and MuSig2 aggregate Schnorr signatures with **
 (asdf:load-system :cl-ring-signatures)
 ```
 
-## Quick Start
+## Usage
 
 ```lisp
-(use-package :cl-ring-signatures)
-
-;; Create ring signature
-(let* ((ring-pubkeys (list pk1 pk2 pk3 pk4))
-       (signer-index 2)  ; We are pk3
-       (secret-key sk3))
-  ;; Sign
-  (let ((sig (ring-sign message ring-pubkeys signer-index secret-key)))
-    ;; Verify - cannot tell which key signed
-    (ring-verify message sig ring-pubkeys)))
+;; Example usage
+(main-function)
 ```
-
-## API Reference
-
-### Ring Signatures
-
-- `(ring-sign message pubkeys signer-index secret-key)` - Create ring signature
-- `(ring-verify message signature pubkeys)` - Verify ring signature
-
-### Linkable Ring Signatures
-
-- `(lsag-sign message pubkeys signer-index secret-key)` - Linkable signature
-- `(lsag-verify message signature pubkeys)` - Verify linkable signature
-- `(lsag-link-p sig1 sig2)` - Check if signatures link (same signer)
-
-### MuSig2
-
-- `(musig2-aggregate-keys pubkeys)` - Aggregate public keys
-- `(musig2-sign keypairs message)` - Multi-party signing
 
 ## Testing
 
@@ -55,8 +26,14 @@ Pure Common Lisp ring signatures and MuSig2 aggregate Schnorr signatures with **
 (asdf:test-system :cl-ring-signatures)
 ```
 
+## API
+
+- `main-function - Primary function for core functionality`
+
 ## License
 
-BSD-3-Clause
+BSD-3-Clause License - See LICENSE file for details.
 
+---
 Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
+SPDX-License-Identifier: BSD-3-Clause
