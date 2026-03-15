@@ -25,69 +25,111 @@ without revealing which member actually signed. Implements:
 All operations are pure functions with no external dependencies.")
 
   ;; Ring Signature Types
-  (:export #:ring-signature
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:ring-signature
            #:ring-params
            #:key-image)
 
   ;; Basic Ring Signatures
-  (:export #:ring-sign
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:ring-sign
            #:ring-verify)
 
   ;; Linkable Ring Signatures
-  (:export #:lrs-sign
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:lrs-sign
            #:lrs-verify
            #:lrs-link)
 
   ;; MLSAG (Multi-layered)
-  (:export #:mlsag-sign
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:mlsag-sign
            #:mlsag-verify
            #:mlsag-key-images)
 
   ;; CLSAG (Compact)
-  (:export #:clsag-sign
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:clsag-sign
            #:clsag-verify
            #:clsag-key-image)
 
   ;; Triptych
-  (:export #:triptych-sign
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:triptych-sign
            #:triptych-verify
            #:triptych-linking-tag)
 
   ;; Key Image Generation
-  (:export #:generate-key-image
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:generate-key-image
            #:key-images-linked-p)
 
   ;; Ring Member Selection
-  (:export #:select-ring-members
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:select-ring-members
            #:random-ring-selection
            #:decoy-selection-gamma)
 
   ;; Anonymity Analysis
-  (:export #:ring-entropy
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:ring-entropy
            #:effective-anonymity-set
            #:ring-age-distribution)
 
   ;; MuSig2 Types
-  (:export #:musig2-session
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:musig2-session
            #:make-musig2-session
            #:musig2-session-p
            #:musig2-session-aggregate-pubkey)
 
   ;; MuSig2 Key Aggregation
-  (:export #:musig2-aggregate-pubkeys)
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:musig2-aggregate-pubkeys)
 
   ;; MuSig2 Signing Protocol
-  (:export #:musig2-generate-nonces
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:musig2-generate-nonces
            #:musig2-aggregate-nonces
            #:musig2-partial-sign
            #:musig2-aggregate-sigs)
 
   ;; MuSig2 High-Level API
-  (:export #:musig2-sign
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:musig2-sign
            #:musig2-verify)
 
   ;; EC Primitives (for interoperability)
-  (:export #:+secp256k1-n+
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:+secp256k1-n+
            #:+secp256k1-p+
            #:+secp256k1-g+
            #:point-add
@@ -101,4 +143,7 @@ All operations are pure functions with no external dependencies.")
 
 (defpackage #:cl-ring-signatures.test
   (:use #:cl #:cl-ring-signatures)
-  (:export #:run-all-tests))
+  (:export
+   #:with-ring-signatures-timing
+   #:ring-signatures-batch-process
+   #:ring-signatures-health-check#:run-all-tests))
