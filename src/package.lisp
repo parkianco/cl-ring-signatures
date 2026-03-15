@@ -26,7 +26,11 @@ All operations are pure functions with no external dependencies.")
 
   ;; Ring Signature Types
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:ring-signature
            #:ring-params
@@ -34,14 +38,22 @@ All operations are pure functions with no external dependencies.")
 
   ;; Basic Ring Signatures
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:ring-sign
            #:ring-verify)
 
   ;; Linkable Ring Signatures
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:lrs-sign
            #:lrs-verify
@@ -49,7 +61,11 @@ All operations are pure functions with no external dependencies.")
 
   ;; MLSAG (Multi-layered)
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:mlsag-sign
            #:mlsag-verify
@@ -57,7 +73,11 @@ All operations are pure functions with no external dependencies.")
 
   ;; CLSAG (Compact)
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:clsag-sign
            #:clsag-verify
@@ -65,7 +85,11 @@ All operations are pure functions with no external dependencies.")
 
   ;; Triptych
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:triptych-sign
            #:triptych-verify
@@ -73,14 +97,22 @@ All operations are pure functions with no external dependencies.")
 
   ;; Key Image Generation
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:generate-key-image
            #:key-images-linked-p)
 
   ;; Ring Member Selection
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:select-ring-members
            #:random-ring-selection
@@ -88,7 +120,11 @@ All operations are pure functions with no external dependencies.")
 
   ;; Anonymity Analysis
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:ring-entropy
            #:effective-anonymity-set
@@ -96,7 +132,11 @@ All operations are pure functions with no external dependencies.")
 
   ;; MuSig2 Types
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:musig2-session
            #:make-musig2-session
@@ -105,13 +145,21 @@ All operations are pure functions with no external dependencies.")
 
   ;; MuSig2 Key Aggregation
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:musig2-aggregate-pubkeys)
 
   ;; MuSig2 Signing Protocol
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:musig2-generate-nonces
            #:musig2-aggregate-nonces
@@ -120,14 +168,22 @@ All operations are pure functions with no external dependencies.")
 
   ;; MuSig2 High-Level API
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:musig2-sign
            #:musig2-verify)
 
   ;; EC Primitives (for interoperability)
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:+secp256k1-n+
            #:+secp256k1-p+
@@ -144,6 +200,10 @@ All operations are pure functions with no external dependencies.")
 (defpackage #:cl-ring-signatures.test
   (:use #:cl #:cl-ring-signatures)
   (:export
-   #:with-ring-signatures-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-ring-signatures-timing
    #:ring-signatures-batch-process
    #:ring-signatures-health-check#:run-all-tests))
